@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <style>
+    :root {
+      --ink: #0c0d0f;
+      --muted: #666a73;
+      --link: #1a73e8;
+      --rule: #e6e8eb;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: #fff; color: var(--ink);
+      font: 16px/1.75 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, Helvetica, Arial;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    .wrap { max-width: 760px; margin: 56px auto 80px; padding: 0 20px; }
+
+    /* Top nav */
+    header { margin-bottom: 28px; }
+    .title { font-weight: 800; font-size: 18px; letter-spacing: .2px; margin: 0 0 10px; }
+    .toc { display: flex; flex-wrap: wrap; gap: 10px 14px; padding: 0; margin: 0; list-style: none; }
+    .toc a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; }
+    .toc a:hover { border-color: var(--link); }
+
+    /* Sections */
+    section { scroll-margin-top: 72px; padding: 24px 0; }
+    section + section { border-top: 1px solid var(--rule); }
+    h2 { font-size: 28px; line-height: 1.3; margin: 0 0 12px; }
+    p { margin: 0 0 14px; }
+    .muted { color: var(--muted); }
+    .backtop { margin-top: 10px; font-size: 14px; }
+    .backtop a { color: var(--link); text-decoration: none; }
+
+    /* Optional highlight when linked */
+    :target { animation: pulse 1.6s ease-out 1; }
+    @keyframes pulse { from { background: #fff5; } to { background: transparent; } }
+  </style>
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+  
+
+    <!-- 섹션들은 원하는 만큼 복사/수정하세요. 링크 공유는 #id 로 가능합니다. -->
+
+    <section id="henk-visch">
+      <h2>Henk Visch – Wall</h2>
+      <p>2024년 에인트호번 스튜디오에서 시작된 의자/벤치 작업과 함께, 작가는 철과 알루미늄을 절곡하며 조각과 가구의 경계를 넘나들었습니다.</p>
+      <p>각 의자를 자세히 보다가 어떤 얼굴을 닮았다는 생각이 들었고, 저는 “이거요! 이걸 원해요!”라고 말했습니다. 그는 기쁜 표정으로 “가져가요! 당신 겁니다.”라고 답하며 택배로 의자를 보내주었습니다.</p>
+      <p class="muted">※ 위 문단들은 예시 텍스트입니다. 전시장 캡션/작가노트로 교체하세요.</p>
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

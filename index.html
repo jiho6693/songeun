@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <style>
+    :root {
+      --ink: #0c0d0f;
+      --muted: #666a73;
+      --link: #1a73e8;
+      --rule: #e6e8eb;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: #fff; color: var(--ink);
+      font: 16px/1.75 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, Helvetica, Arial;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    .wrap { max-width: 760px; margin: 56px auto 80px; padding: 0 20px; }
+
+    /* Top nav */
+    header { margin-bottom: 28px; }
+    .title { font-weight: 800; font-size: 18px; letter-spacing: .2px; margin: 0 0 10px; }
+    .toc { display: flex; flex-wrap: wrap; gap: 10px 14px; padding: 0; margin: 0; list-style: none; }
+    .toc a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; }
+    .toc a:hover { border-color: var(--link); }
+
+    /* Sections */
+    section { scroll-margin-top: 72px; padding: 24px 0; }
+    section + section { border-top: 1px solid var(--rule); }
+    h2 { font-size: 28px; line-height: 1.3; margin: 0 0 12px; }
+    p { margin: 0 0 14px; }
+    .muted { color: var(--muted); }
+    .backtop { margin-top: 10px; font-size: 14px; }
+    .backtop a { color: var(--link); text-decoration: none; }
+
+    /* Optional highlight when linked */
+    :target { animation: pulse 1.6s ease-out 1; }
+    @keyframes pulse { from { background: #fff5; } to { background: transparent; } }
+  </style>
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <header>
+      <div class="title">Artists · 링크 클릭 → 아래 설명</div>
+      <ul class="toc">
+        <li><a href="#henk-visch">Henk Visch – Wall</a></li>
+        <li><a href="#jiho-park">Jiho Park – We all dance, on the Eve</a></li>
+        <li><a href="#jewyo-rhii">Jewyo Rhii – Storybus</a></li>
+        <li><a href="#minouk-lim">Minouk Lim – O Tannenbaum</a></li>
+        <li><a href="#seunghye-hong">SeungHye Hong – We all</a></li>
+      </ul>
+    </header>
+
+    <!-- 섹션들은 원하는 만큼 복사/수정하세요. 링크 공유는 #id 로 가능합니다. -->
+
+    <section id="henk-visch">
+      <h2>Henk Visch – Wall</h2>
+      <p>2024년 에인트호번 스튜디오에서 시작된 의자/벤치 작업과 함께, 작가는 철과 알루미늄을 절곡하며 조각과 가구의 경계를 넘나들었습니다.</p>
+      <p>각 의자를 자세히 보다가 어떤 얼굴을 닮았다는 생각이 들었고, 저는 “이거요! 이걸 원해요!”라고 말했습니다. 그는 기쁜 표정으로 “가져가요! 당신 겁니다.”라고 답하며 택배로 의자를 보내주었습니다.</p>
+      <p class="muted">※ 위 문단들은 예시 텍스트입니다. 전시장 캡션/작가노트로 교체하세요.</p>
+      <div class="backtop"><a href="#top">↑ 맨 위로</a></div>
+    </section>
+
+    <section id="jiho-park">
+      <h2>Jiho Park – We all dance, on the Eve</h2>
+      <p>단채널 영상, 컬러, 사운드, 3′07″. 디지털 이미지의 유통과 물질적 제작노동의 긴장을 병치하는 작업입니다.</p>
+      <p class="muted">작품 소개나 제작 배경을 2–4문단 정도로 간결하게 적어주세요.</p>
+      <div class="backtop"><a href="#top">↑ 맨 위로</a></div>
+    </section>
+
+    <section id="jewyo-rhii">
+      <h2>Jewyo Rhii – Storybus</h2>
+      <p>이동/협업의 조건을 드러내는 프로젝트. 공연, 영상, 사운드가 얽히며 잊힌 이야기들을 호출합니다.</p>
+      <div class="backtop"><a href="#top">↑ 맨 위로</a></div>
+    </section>
+
+    <section id="minouk-lim">
+      <h2>Minouk Lim – O Tannenbaum</h2>
+      <p>현대사의 파편과 장소의 기억을 엮는 비디오/퍼포먼스. 공동체적 리듬과 애도의 형식을 실험합니다.</p>
+      <div class="backtop"><a href="#top">↑ 맨 위로</a></div>
+    </section>
+
+    <section id="seunghye-hong">
+      <h2>SeungHye Hong – We all</h2>
+      <p>모듈과 패턴이 생성하는 규칙/변주의 회화·설치.</p>
+      <div class="backtop"><a href="#top">↑ 맨 위로</a></div>
+    </section>
+  </div>
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>
