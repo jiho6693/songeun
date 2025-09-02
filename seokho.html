@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>Seokho Shin</h2>
+      
+Three weeks before the closure of Gangnam Pavilion in 2025, Seokho Shin held his final exhibition.
+
+“Under Depot” had primarily been a theater for video screenings, but for the last show, the 6-meter screen was switched into a transparent glass mode, revealing the interior space for the first time and showing objects and installation works.
+
+The previous winter, when he tore down the house he had lived in for more than twenty years, Shin kept the internal framework of his own room and later rearranged it inside Under Depot. When the rough and flimsy skeletons emerged from behind the walls, Shin was struck by the absurdity that he had felt safe and secure living through his childhood, adolescence, and young adulthood within them.
+
+Thinking of the end of Gangnam Pavilion, and of his old room that could never be seen again, he titled the exhibition LEAVE. On the screen, he placed a small note to bid farewell and express gratitude to the local people.
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

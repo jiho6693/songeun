@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>Lee Inae</h2>
+      
+In 2016, I handed the microphone to Lee Inae and asked her to tell everyone about the tragedies she had lived through—the most tragic of them all.
+
+At the Gwangju Biennale performance Dawn Breaks, Lee Inae, small in stature, began her story standing on the sloped park, while Jeong Ji-hyun concealed her in smoke with the fog machine he had built.
+
+On the StoryBus, Hwang Soo-yeon snapped a rubber band to make a sound. I moved the large black curtain I had made to shift the scene. But no one could hear Lee Inae’s story.
+
+Through the smoke, pressing the microphone with her hand as she spoke, she suddenly stopped. The smoke dispersed, and there she was again—standing straight, looking forward, reappearing before the audience.
+
+A fragment of her story I overheard as I passed by—how unbearably tragic it was.
+
+Lee Inae drew crouching animals with bold contour lines. Then she drew their fur. She sharpened her brush more and more, detail by detail.
+
+By gathering tens of thousands of piercing, sharp marks to fill the surface, she came to understand things that cannot be grasped as human experience, but that simply unfold on their own.
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

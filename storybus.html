@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>StoryBus</h2>
+      
+Space Mizo (Namhae)
+
+It became closer to the form of a “bus” where more than one person can speak, and anyone can get on. The plan is to gather the stories of the people of Namhae and turn them into a performance.
+
+StoryBus (Mizo) 2024 is an expanded version of the work that artist Jewyo Rhii first introduced at the 2016 Gwangju Biennale. This year, it was newly created for the project Cold Serve, curated by Space Mizo, to be performed with more collaborators.
+
+The very first StoryBus was a storytelling machine for three people. When two people pushed their own objects into the box while telling their stories, the person at the front, looking into the box, would combine and reconstruct the two stories.
+
+This third person was the audience inside the StoryBus—an observer, commentator, or thinker. That person became the novelist or producer who wove together two disconnected stories.
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>Choi Ria</h2>
+      
+In 2024, Ria traveled six hours to Namhae to load her works onto the new four-seater StoryBus.
+
+She brought fences and tools for taming horses, crafted from paper she had worked with for four years. To describe, in physical terms, the act of “gradual, repetitive taming,” she shaped the process of her work into a similar series of actions.
+
+The paper, once lying flat, absorbed Ria’s time—her very lifespan—until it thickened and finally stood upright.
+
+In Namhae, on the StoryBus, in between the stories of local residents, Ria shared the story of her own work. Alone in the studio, she had asked herself thousands of times: “What am I making?” On the StoryBus, she offered her answer in thoughtful and resolute words.
+
+When we invited neighbors in Namhae to the StoryBus, most of them simply smiled. But when we asked them to come just once and see, the kind-hearted residents would stop by after work. Each time, Ria showed them a rehearsal of her work and her story.
+
+The artist lifted what she had made with her own hands and spoke clearly, step by step. For the residents, the scene and the story felt unfamiliar at first, but they soon became drawn in, listening seriously.
+
+Then, many turned their hearts, deciding that they too would try telling their own stories.
+
+Ria showed me—right there in distant Namhae, before the sea—how the power of art can overturn a situation before our very eyes.
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

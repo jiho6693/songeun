@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>Donghyun Lee</h2>
+      
+Lee Donghyun knew what to do when he unfolded what he had imagined before his eyes. He did not come to know it slowly, but instantly. Even when he had little experience, he clearly instructed the performers on how to move.
+
+I was amazed the whole time. One of a kind.
+
+During a one-on-one session in 2018, when Lee was a fourth-year student, he shared with me one shocking scene. It was about the unfamiliar body images and human orifices he had encountered during his travels in Brazil. He spoke with such detail, and with such calmness. He recalled it as though the scene were unfolding right before our eyes.
+
+The story was vivid, beautiful, and tragic. I had to hold myself firmly together.
+
+When Lee Donghyun showed the objects he had made with his hands, it was fun. It was clear how he immersed himself and became absorbed in the making, and I felt I could even follow the order of where he had found joy, tracing it with my eyes.
+
+Looking at his recent objects, it seems he has gained a unique insight into holes. His figures open up new frameworks and unfamiliar spaces by reversing inside and outside through expanded openings or ruptures, loosening boundaries and twisting them. They are endlessly connected, all elements forming a single body.
+
+I will have to keep watch for a while. Now, what will Lee Donghyun do.
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

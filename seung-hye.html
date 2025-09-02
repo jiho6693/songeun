@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>Hong Seung-Hye</h2>
+      
+“This one, it hangs like this on the groove, the nail head fits right in here… you see? Well, of course you know.”
+ 
+Hong Seung-hye, holding a fairly heavy iron girl and boy in turn against the wall, showed me directly how to hang them.
+
+When Love Your Depot Gangnam Pavilion began in 2021, she called me into the Ada Ham office, the storage room, to choose works. When I first met her in 2003, in her early forties, she said, “Ju-yo Lee, you can take it a bit easy, like me, plain and simple.” I looked at her work and wondered, can it really be plain and simple like that? But she kept insisting on it, and with the charm she carried, I soon found myself wanting to emulate her “plain and simple.”
+
+Since then, in every moment of conflict, for seventeen years, until the winter of 2019, I would think of Hong Seung-hye: “Ah… she told me to take it easy…”
+
+In 2019, with We All entrusted to the very first Love Your Depot, Jiho Park made the bewildering request to dance a waltz with those works. I steadied myself and called Hong Seung-hye. Forty minutes of persuasion and urging—“We will load them carefully on wheels so they won’t be damaged.” Hong Seung-hye replied, “I understand, but give me a little time to think.”
+
+Two hours later, the call came again. The answer was Yes.
+
+“There are stairs on the route, so you can’t put them on wheels from the start. Will you carry them one by one? Then each needs its own stand. And when you come down the stairs, don’t set them directly on the ground. Place them immediately onto the stand. Putting them down and lifting them again is too complicated. The stand should be 18T, with three wheels—three are more stable and prettier than four. Keep the MDF color as is, the back support fixed with screws in a T-shape, same material. Make the stand heavy so it won’t clatter when placed. Bring the wheels inward so they won’t show—that’s better, isn’t it? Round the base. Leave eight centimeters at the front of the work, three? two centimeters at the back where the support stands.”
+
+Wow, a one-hour manual. Listening, my brain awakened with amazement, memorizing the sizes and methods she dictated. Her voice was sharp. I sat tense, then burst into laughter.
+
+Seventeen years I was fooled by her “plain and simple,” my own slyness. Her real-life details that lured me with “plain and simple.” And I laughed out loud, like breaking wind, relieved and free
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

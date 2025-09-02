@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>Soo-yeon Hwang </h2>
+      
+We carefully lifted the paper faces of Hwang Soo-yeon, which had been resting quietly, filling the studio table (or shelves), loaded them onto a cart, and carried them one by one in a line.
+ 
+We created a setup that introduced each paper face differently, and determined the duration of their appearance through the performers’ movements.
+
+When she was younger, Hwang Soo-yeon would cut yellow rubber bands into ever smaller pieces until they could no longer be divided, piling them high.
+
+She crumpled aluminum foil, hammered and hammered it, until it became a lump large enough to hold to her chest.
+
+A persistent act of altering the inherent nature of a material.
+Deepest care.
+
+I was always amazed at how Hwang Soo-yeon used the folds of paper as a framework to create those intricate curves.
+ 
+Even in simpler forms, I was fascinated by the way she divided the surfaces.
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

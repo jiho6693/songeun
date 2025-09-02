@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>Myungwoo Jung</h2>
+      
+In Media City Seoul 2010, Trust, I presented Lie on the Han River (한강에 누워)—video, drawings, installation.
+
+Jung Myungwoo came along, introduced by Moon Boram to help out. He had been out of the army just two or three months. His post was carpenter-soldier.
+
+I asked him to carve four hearts into Styrofoam. He looked puzzled. A bit troubled, he cut the hearts with a knife and said, “So… what should I do now?” At that time my work was mostly light, so there wasn’t really any chance for him to show his carpenter-soldier skills. Just things like propping up vinyl, Styrofoam, paper with wood sticks.
+
+Later, as my work shifted, Myungwoo was hanging from ceilings, climbing walls, crawling across floors. Wow. Amazing… and I felt sorry. When I decided to cover the exhibition floor with a Moving Floor, he came. In 2013, on the third floor of Sonje Art Center, we made a yellowish moving floor, imitating the yellow floor there. While building it, Myungwoo thought seriously about labor in art. It was hard labor—crawling on the floor, fastening each piece one by one.
+
+For his graduation piece, Myungwoo loaded all kinds of tools from the moving floor onto an old truck. Through digital control, the tools moved along with his rap. He turned the making steps into rap to shout, the making gestures into dance, and then DJing with tools.
+
+During the performance, the jigsaw dropped, cutting a batten straight down. The circular saw cut through boards, sparks flying. I was so moved, I immediately called that performance into the Sonje parking lot. Who really launches such a big exhibition, and who actually makes it? Where does the artist’s hand stop, and the assistant’s hand begin?
+
+That question, which troubled him as he was about to graduate from art school, is still one to think about. For me too—that important thing he said, so freely, riding the truck, dancing.
+
+All talented! I hope Jung Myungwoo never grows old. So I can keep watching that flexible dance of artistic labor, as if the bones had been taken out.
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>

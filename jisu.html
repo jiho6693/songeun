@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artists · One‑Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <section id="henk-visch">
+      <h2>Jisu Kim</h2>
+      
+The long paper funnel, stretched forward as if draped over the face, made Jisu Kim’s concentration even more complete. Her extremely thin body functioned like part of a machine, carrying out the physical rules she herself had set in her performance.
+
+The blue hair was mysterious because it belonged to Jisu Kim. Her voice could sometimes be heard. She was silent, and moreover, there were no adjectives.
+
+She wore the shoes she had made herself and strode forward confidently. Those shoes kept bringing her steps back to the same place.
+
+Watching Jisu Kim devote the utmost attention to each step—one, and then another—I swallowed hard and held my breath. When she began her movement, it felt as though a separate world was created around her.
+
+Her actions were both artificial and natural, and I thought she was performing that act naturally. But she said no.
+“It doesn’t happen quickly, it happens slowly.
+ I can’t do it right here, I go home and keep practicing…”
+
+ When I went to London with the three members of Team Depot, even on nights after a grueling schedule, I saw Jisu Kim, in sweatpants, quietly slipping away to practice.
+
+ And then came the long repetition of subtle, simple movements. Stopping, and thinking quietly.
+
+ Inside a container box in the yard of the lodging, in the darkness, as I watched her shadow flickering against the glass, I thought, “What does this young person know?”
+
+ She had learned at a young age the way to persist, to continue, to try again until she came closer to what she desired. An adult who finds quiet time, and places herself at the edge of the earth.
+
+    </section>
+
+
+  <!-- 해시 이동 시 문서 제목을 현재 섹션으로 가볍게 동기화 (선택 사항) -->
+  <script>
+    const sections = Array.from(document.querySelectorAll('section'));
+    function currentTitleFromHash(){
+      const id = location.hash.slice(1);
+      const sec = sections.find(s => s.id === id);
+      if (sec) document.title = sec.querySelector('h2').textContent + ' · Artists';
+      else document.title = 'Artists · One‑Page';
+    }
+    window.addEventListener('hashchange', currentTitleFromHash);
+    currentTitleFromHash();
+  </script>
+</body>
+</html>
