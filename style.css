@@ -19,8 +19,10 @@
   word-break: keep-all; /* 한글 줄바꿈 자연스럽게 */
 
 }
-    .wrap {   white-space: pre-line; max-width: 760px; margin: 0px auto 80px; padding: 0 20px; }
+    .wrap {    max-width: 760px; margin: 0px auto 80px; padding: 0 20px; }
+#text p{white-space: pre-line;
 
+}
     /* Top nav */
     header { margin-bottom: 28px; }
     .title { font-weight: 800; font-size: 18px; letter-spacing: .2px; margin: 0 0 10px; }
